@@ -8,6 +8,7 @@ export const port = 2000;
 export const bootstrap = () => {
   const server = express();
 
+  server.use(express.json());
   server.use(Routes.task, TaskRouter);
   server.use(ErrorHandler);
 
